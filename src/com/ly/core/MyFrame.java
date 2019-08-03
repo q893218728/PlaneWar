@@ -88,7 +88,7 @@ public class MyFrame extends Frame {
 
     private void bossHit(Graphics g) {
 
-        if (Plane.mark > 500 && Boss.bosslive) {
+        if (Plane.mark > 5 && Boss.bosslive) {
             boss.draw(g);
             if (boss.getY() > 0 - Constant.GAME_HEIGHT) {
                 BackGround.speed = 0;
@@ -162,6 +162,11 @@ public class MyFrame extends Frame {
             if (daojishi) {
                 countDown(g);
             } else {
+                for (EnemyBullet enemyBullet : enemyBulletList) {
+                    enemyBullet.draw(g);
+                    enemyBullet.collision(myPlane);//敌方子弹撞我飞机判断
+
+                }
                 bossHit(g);//打boss
                 if (myPlane.blood <= 0) {
                     gameOver = false;
@@ -193,11 +198,7 @@ public class MyFrame extends Frame {
                 }
 
                 //画敌方飞机子弹
-                for (EnemyBullet enemyBullet : enemyBulletList) {
-                    enemyBullet.draw(g);
-                    enemyBullet.collision(myPlane);//敌方子弹撞我飞机判断
 
-                }
 
 
                 //大招碰到飞机,boss

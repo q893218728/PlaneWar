@@ -30,7 +30,7 @@ public class Defense extends BaseSpirte implements Drawable, Moveable {
             if (x < 300) {
                 x++;
 
-                g.drawImage(image, getX(), getY(),
+                g.drawImage(image, getX()-1, getY()-13,
                         image.getWidth(null),image.getHeight(null),
                         null);
             }

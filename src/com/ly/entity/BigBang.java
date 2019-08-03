@@ -79,6 +79,7 @@ public class BigBang extends BaseSpirte implements Drawable {
 
             }else{
                 boss.blood = 0;
+                Boss.bosslive = false;
                 Plane.mark += 1000;
                 Bullet.explodes.add(new Explode(
                         boss.getX()+ImageMap.get("boss1").getWidth(null)/2-ImageMap.get("bossexplode1").getWidth(null)/2,
