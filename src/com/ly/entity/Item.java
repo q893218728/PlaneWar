@@ -100,7 +100,6 @@ public class Item extends BaseSpirte implements Drawable, Moveable {
                 Defense.ishudun = true;
             }
 
-
             myFrame.itemList.remove(this);
         }
     }

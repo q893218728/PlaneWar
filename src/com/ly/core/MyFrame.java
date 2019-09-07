@@ -88,7 +88,7 @@ public class MyFrame extends Frame {
 
     private void bossHit(Graphics g) {
 
-        if (Plane.mark > 5 && Boss.bosslive) {
+        if (Plane.mark > 200 && Boss.bosslive) {
             boss.draw(g);
             if (boss.getY() > 0 - Constant.GAME_HEIGHT) {
                 BackGround.speed = 0;
